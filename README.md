@@ -1,4 +1,4 @@
-# Study on different state of art Few shot user intent detection  
+# Study Few shot user intent detection  in state of art 
 
 1. SimCSE: Simple Contrastive Learning of Sentence Embeddings
    ref: https://github.com/princeton-nlp/SimCSE (Apr 10)  
