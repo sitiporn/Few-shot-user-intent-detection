@@ -12,3 +12,10 @@
 4. Few-Shot Intent Detection via Contrastive Pre-Training and Fine-Tuning (Apr 16)
    ref: https://arxiv.org/abs/2109.06349
    source : https://github.com/sitiporn/Reading-paper/tree/main/implement_papers 
+   
+   
+   
+   web blogs:
+   1. https://few-shot-text-classification.fastforwardlabs.com/
+   2. https://d2l.ai/chapter_natural-language-processing-applications/natural-language-inference-bert.html
+   3. https://bhuvana-kundumani.medium.com/implementation-of-simcse-for-unsupervised-approach-in-pytorch-a3f8da756839
