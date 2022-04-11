@@ -249,7 +249,7 @@ def train(model,device,optimizer,train_loader,valid_loader,tokenizer,epochs:int=
 
 
 #  no gradients needed
-def test(model,device,test_loader,data_size,tokenizer):
+def test(model,device,label_maps,test_loader,data_size,tokenizer):
     
     correct = 0
          
