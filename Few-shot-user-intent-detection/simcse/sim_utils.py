@@ -119,7 +119,7 @@ def freeze_layers(model,freeze_layers_count:int=0):
         
     
         return model     
-def train(model,device,optimizer,train_loader,valid_loader,tokenizer,epochs:int=30):
+def train(model,device,label_maps,optimizer,train_loader,valid_loader,tokenizer,epochs:int=30):
 
     train_loss_hist = [] 
     valid_loss_hist = []
