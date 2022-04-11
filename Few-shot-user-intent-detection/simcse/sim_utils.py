@@ -119,7 +119,7 @@ def freeze_layers(model,freeze_layers_count:int=0):
         
     
         return model     
-def train(model,optimizer,train_loader,valid_loader,tokenizer,epochs:int=30):
+def train(model,device,optimizer,train_loader,valid_loader,tokenizer,epochs:int=30):
 
     train_loss_hist = [] 
     valid_loss_hist = []
@@ -249,7 +249,7 @@ def train(model,optimizer,train_loader,valid_loader,tokenizer,epochs:int=30):
 
 
 #  no gradients needed
-def test(model,test_loader,data_size,tokenizer):
+def test(model,device,test_loader,data_size,tokenizer):
     
     correct = 0
          
