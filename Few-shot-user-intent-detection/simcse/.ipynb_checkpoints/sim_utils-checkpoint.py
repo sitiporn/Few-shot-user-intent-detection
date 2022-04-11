@@ -119,7 +119,7 @@ def freeze_layers(model,freeze_layers_count:int=0):
         
     
         return model     
-def train(model,device,label_maps,optimizer,train_loader,valid_loader,train_data,valid_data,tokenizer,epochs:int=30):
+def train(exp_name,model,device,label_maps,optimizer,train_loader,valid_loader,train_data,valid_data,tokenizer,epochs:int=30):
 
     train_loss_hist = [] 
     valid_loss_hist = []
@@ -242,7 +242,7 @@ def train(model,device,label_maps,optimizer,train_loader,valid_loader,train_data
         if min_valid_loss > (running_loss/len(valid_data)):
             print(f'Validation Loss Decreased({min_valid_loss:.6f}--->{running_loss/len(valid_data):.6f}) \t Saving The Model')
             min_valid_loss = running_loss/len(valid_data) 
-            torch.save(model.state_dict(), '../../../fewshot_models/saved_model.pth')
+            torch.save(model.state_dict(), f'../../../fewshot_models/{exp_name}.pth')
             
            
     return (train_acc_hist, train_loss_hist), (valid_acc_hist, valid_loss_hist)  
