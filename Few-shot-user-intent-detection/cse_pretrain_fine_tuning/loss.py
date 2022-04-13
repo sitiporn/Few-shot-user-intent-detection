@@ -155,7 +155,7 @@ def create_supervised_pair(h,labels,debug:bool=False):
     
     
 
-def supervised_contrasive_loss(device,h_i:Tensor,h_j:Tensor,h_n:Tensor,T:int,temp,idx_yij:List,callback=None,debug=False)->Union[ndarray, Tensor]:
+def supervised_contrasive_loss(device,loss_fct:nn.CrossEntropyLoss,h_i:Tensor,h_j:Tensor,h_n:Tensor,T:int,temp,idx_yij:List,callback=None,debug=False)->Union[ndarray, Tensor]:
     """
     T - number of pairs from the same classes in batch
     
@@ -237,12 +237,14 @@ def supervised_contrasive_loss(device,h_i:Tensor,h_j:Tensor,h_n:Tensor,T:int,tem
     if debug:
         print("bot sim :",bot_sim.shape)
         print("pos sim :",pos_sim.shape)
+        
+    #loss = torch.log((pos_sim/bot_sim))
+    labels = torch.ones(pos_sim.shape[0])
+
+    loss = loss_fct((pos_sim/bot_sim),labels)
     
     
-    loss = torch.log((pos_sim/bot_sim))
-    
-    
-    loss = torch.sum(loss)
+    #loss = torch.sum(loss)
 
     if debug:
         print("after take log: ",loss)
@@ -250,4 +252,4 @@ def supervised_contrasive_loss(device,h_i:Tensor,h_j:Tensor,h_n:Tensor,T:int,tem
     # loss = loss_fct() #-loss / T   
 
     
-    return loss
+    return loss / T

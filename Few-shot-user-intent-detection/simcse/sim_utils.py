@@ -6,7 +6,7 @@ from torch.utils.data import Dataset, DataLoader
 from transformers import RobertaConfig, RobertaModel, RobertaTokenizer, RobertaForSequenceClassification
 from transformers import AdamW
 import random
-from IPython.display import clear_output
+#from IPython.display import clear_output
 import matplotlib.pyplot as plt
 from collections import OrderedDict
 from scipy.spatial.distance import cosine
