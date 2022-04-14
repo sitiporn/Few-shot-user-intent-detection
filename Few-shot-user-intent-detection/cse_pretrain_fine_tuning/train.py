@@ -16,7 +16,7 @@ from transformers import AutoModelForSequenceClassification, TrainingArguments, 
 from loss import Similarity, create_supervised_pair, supervised_contrasive_loss
 
 
-def train_contrastive_learnig(model,optimizer,loss_fct,train_loader,tokenizer,valid_loader,device,epochs:int=30):
+def train_contrastive_learnig(model,optimizer,loss_fct,label_maps,temp,train_loader,tokenizer,valid_loader,train_data,valid_data,device,lamda,epochs:int=30):
     
     
     train_loss_hist = [] 
@@ -42,8 +42,13 @@ def train_contrastive_learnig(model,optimizer,loss_fct,train_loader,tokenizer,va
             inputs = tokenizer(sentence,padding=True,truncation=True,return_tensors="pt")
 
 
+
+
+
             #assert len(np.unique(batch["Class"])) == len(batch["Class"])  
             # move parameter to device
+            # inputs decompose into  input_ids, token_type_ids, attention_mask
+
             inputs = {k:v.to(device) for k,v in inputs.items()}
 
             # map string labels to class idex
@@ -56,8 +61,7 @@ def train_contrastive_learnig(model,optimizer,loss_fct,train_loader,tokenizer,va
 
              # clear gradients
             optimizer.zero_grad()
-            
-            
+
             outputs = model(**inputs,labels=labels,output_hidden_states=True)     
         
             hidden_states = outputs.hidden_states
@@ -70,6 +74,7 @@ def train_contrastive_learnig(model,optimizer,loss_fct,train_loader,tokenizer,va
 
             # create pair samples
             T, h_i, h_j, idx_yij = create_supervised_pair(h,batch['Class'],debug=False)
+
 
             if h_i is None:
                 print("skip this batch")
@@ -151,9 +156,16 @@ def train_contrastive_learnig(model,optimizer,loss_fct,train_loader,tokenizer,va
             # create pair samples
             T, h_i, h_j, idx_yij = create_supervised_pair(h,batch['Class'],debug=False)
 
+
+
+            if h_i is None:
+                print("skip this batch")
+                skip_time +=1 
+                continue
+
           
             # supervised contrastive loss 
-            loss_s_cl = supervised_contrasive_loss(device,h_i, h_j, h, T,temp=temp,idx_yij=idx_yij,debug=False)
+            loss_s_cl = supervised_contrasive_loss(device,loss_fct,h_i, h_j, h, T,temp=temp,idx_yij=idx_yij,debug=False)
 
             # cross entropy loss
             loss_classify, logits = outputs[:2]
