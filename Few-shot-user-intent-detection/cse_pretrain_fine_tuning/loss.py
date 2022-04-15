@@ -13,7 +13,7 @@ import numpy as np
 from transformers import RobertaTokenizer
 import random
 
-loss_fct = nn.CrossEntropyLoss()
+
 
 class Similarity(nn.Module):
     """

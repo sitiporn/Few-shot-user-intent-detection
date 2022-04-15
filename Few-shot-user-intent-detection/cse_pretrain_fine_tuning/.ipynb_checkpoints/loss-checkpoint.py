@@ -13,7 +13,7 @@ import numpy as np
 from transformers import RobertaTokenizer
 import random
 
-loss_fct = nn.CrossEntropyLoss()
+
 
 class Similarity(nn.Module):
     """
@@ -55,7 +55,7 @@ def create_supervised_pair(h,labels,debug:bool=False):
     # pair of concat correct
 
     T = 0 # the numbers of pairs sample
-    
+     
     for idx, label in enumerate(labels): 
 
         if idx in skips:
@@ -155,7 +155,7 @@ def create_supervised_pair(h,labels,debug:bool=False):
     
     
 
-def supervised_contrasive_loss(device,h_i:Tensor,h_j:Tensor,h_n:Tensor,T:int,temp,idx_yij:List,callback=None,debug=False)->Union[ndarray, Tensor]:
+def supervised_contrasive_loss(device,loss_fct:nn.CrossEntropyLoss(),h_i:Tensor,h_j:Tensor,h_n:Tensor,T:int,temp,idx_yij:List,callback=None,debug=False)->Union[ndarray, Tensor]:
     """
     T - number of pairs from the same classes in batch
     
@@ -165,6 +165,14 @@ def supervised_contrasive_loss(device,h_i:Tensor,h_j:Tensor,h_n:Tensor,T:int,tem
     neg_pair - two utterances across different class  
    
     """
+
+    #print("==== load info =====")
+    #print("h_i :",h_i.shape)
+    #print("h_j :",h_j.shape)
+    #print("nums of pairs :",T)
+
+
+
     sim = Similarity(temp)
     
     #device = "cuda:2"
@@ -237,17 +245,24 @@ def supervised_contrasive_loss(device,h_i:Tensor,h_j:Tensor,h_n:Tensor,T:int,tem
     if debug:
         print("bot sim :",bot_sim.shape)
         print("pos sim :",pos_sim.shape)
-    
-    
-    loss = torch.log((pos_sim/bot_sim))
-    
-    
-    loss = torch.sum(loss)
+        
+    #loss = torch.log((pos_sim/bot_sim))
 
-    if debug:
-        print("after take log: ",loss)
+    labels = torch.ones(pos_sim.shape[0]).long()
+    cos = (pos_sim/bot_sim) 
+
+    # label : 0 neg sim, 1: pos sim
     
-    # loss = loss_fct() #-loss / T   
+    input = torch.zeros(cos.size(0),2)   
+    input[:,0] = 1-cos
+    input[:,1] = cos
+
+    #print("input :",input)
+    #print("cos val :",cos)
+
+    loss = loss_fct(input,labels)
+    
+   # print("Entropy of constrative :",loss)
 
     
     return loss
