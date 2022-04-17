@@ -87,7 +87,7 @@ class CustomTextDataset(Dataset):
     
         return sample
 
-def freeze_layers(model,freeze_layers_count:int=0):
+def freeze_layers(model,stop_freeze:str='classifier',freeze_layers_count:int=0):
 
         """
         model : model object that we create 
@@ -103,7 +103,7 @@ def freeze_layers(model,freeze_layers_count:int=0):
 
             keys = name.split(".")
 
-            if str(freeze_layers_count) in keys or 'classifier' in keys:
+            if str(freeze_layers_count) in keys or stop_freeze in keys:
                 break
             
             param.requires_grad = False 
