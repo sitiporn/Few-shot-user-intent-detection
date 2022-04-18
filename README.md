@@ -19,3 +19,5 @@
    1. https://few-shot-text-classification.fastforwardlabs.com/
    2. https://d2l.ai/chapter_natural-language-processing-applications/natural-language-inference-bert.html
    3. https://bhuvana-kundumani.medium.com/implementation-of-simcse-for-unsupervised-approach-in-pytorch-a3f8da756839
+   4. https://monkeylearn.com/blog/intent-classification/
+   5. https://medium.com/analytics-vidhya/dialog-augmentation-and-intent-detection-5d76bdf0fcb8
