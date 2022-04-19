@@ -21,3 +21,13 @@
    3. https://bhuvana-kundumani.medium.com/implementation-of-simcse-for-unsupervised-approach-in-pytorch-a3f8da756839
    4. https://monkeylearn.com/blog/intent-classification/
    5. https://medium.com/analytics-vidhya/dialog-augmentation-and-intent-detection-5d76bdf0fcb8
+
+
+noted
+
+Best threshold: 0.7000000000000001 (index: 7)
+Best in_acc: 91.86666107177734 std: 2.8244941234588623
+Best oos_recall: 97.5999984741211 std: 0.8944271802902222
+Best oos_prec: 86.95243072509766 std: 3.594482183456421
+Best oos_f1: 91.93324279785156 std: 1.8878377676010132
+
