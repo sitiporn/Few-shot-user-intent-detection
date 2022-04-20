@@ -23,11 +23,4 @@
    5. https://medium.com/analytics-vidhya/dialog-augmentation-and-intent-detection-5d76bdf0fcb8
 
 
-### noted
-
-- Best threshold: 0.9 (index: 9)
-- Best in_acc: 84.53333282470703 std: 0.9033875465393066
-- Best oos_recall: 90.80000305175781 std: 2.5884358882904053
-- Best oos_prec: 21.35637664794922 std: 1.143170714378357
-- Best oos_f1: 34.57252883911133 std: 1.6293565034866333
 
