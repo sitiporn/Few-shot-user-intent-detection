@@ -6,14 +6,17 @@
    ref: https://github.com/salesforce/DNNC-few-shot-intent 
 
 3. Efficient intent Detection with Dual sentence Encoders 
+   
    ref: https://arxiv.org/pdf/2003.04807.pdf
 
 
 4. Few-Shot Intent Detection via Contrastive Pre-Training and Fine-Tuning 
+  
    ref: https://arxiv.org/abs/2109.06349
    source : https://github.com/sitiporn/Reading-paper/tree/main/implement_papers 
    
 5. DeCLUTR: Deep Contrastive Learning for Unsupervised Textual Representations
+   
    ref : https://arxiv.org/pdf/2006.03659.pdf   
    source : https://github.com/JohnGiorgi/DeCLUTR
    
