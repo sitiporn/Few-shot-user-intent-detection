@@ -1,0 +1,2 @@
+test acc
+shot:train_5_data_name:HWU64_model:declutr-small_test_acc:67.4721189591078

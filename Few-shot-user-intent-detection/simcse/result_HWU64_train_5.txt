@@ -1,0 +1,5 @@
+test acc
+data_name:HWU64_model:sup-simcse-roberta-base_test_acc:75.0
+data_name:HWU64_model:unsup-simcse-roberta-base_test_acc:65.33457249070632
+data_name:HWU64_model:sup-simcse-bert-base-uncased_test_acc:74.44237918215613
+data_name:HWU64_model:unsup-simcse-bert-base-uncased_test_acc:67.56505576208178

@@ -150,6 +150,8 @@ def train(exp_name,model,device,label_maps,optimizer,train_loader,valid_loader,t
             inputs = {k:v.to(device) for k,v in inputs.items()}
 
             # map string labels to class idex
+            # label_maps -> update 
+            # batch_class -> not update 
             labels = [label_maps[stringtoId] for stringtoId in (batch['Class'])]
 
             # convert list to tensor
@@ -252,7 +254,7 @@ def train(exp_name,model,device,label_maps,optimizer,train_loader,valid_loader,t
 def test(model,device,label_maps,test_loader,data_size,tokenizer):
     
     correct = 0
-         
+      
     with torch.no_grad():
         for (idx, batch) in enumerate(test_loader):
             sentence = batch["Text"]

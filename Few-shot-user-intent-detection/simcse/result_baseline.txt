@@ -1,0 +1,13 @@
+test acc
+shot:train_5_data_name:CLINC150_model:roberta-base_test_acc:57.266666666666666
+shot:train_5_data_name:CLINC150_model:bert-base-uncased_test_acc:16.355555555555558
+shot:train_5_data_name:BANKING77_model:roberta-base_test_acc:35.84415584415584
+shot:train_5_data_name:BANKING77_model:bert-base-uncased_test_acc:10.811688311688311
+shot:train_5_data_name:HWU64_model:roberta-base_test_acc:56.226765799256505
+shot:train_5_data_name:HWU64_model:bert-base-uncased_test_acc:25.27881040892193
+shot:train_10_data_name:CLINC150_model:roberta-base_test_acc:72.97777777777777
+shot:train_10_data_name:CLINC150_model:bert-base-uncased_test_acc:29.777777777777775
+shot:train_10_data_name:BANKING77_model:roberta-base_test_acc:53.63636363636364
+shot:train_10_data_name:BANKING77_model:bert-base-uncased_test_acc:15.844155844155845
+shot:train_10_data_name:HWU64_model:roberta-base_test_acc:63.66171003717472
+shot:train_10_data_name:HWU64_model:bert-base-uncased_test_acc:27.509293680297397

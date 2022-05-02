@@ -1,0 +1,13 @@
+test acc
+data_name:CLINC150_model:sup-simcse-roberta-base_train_10_1_test_acc:0.6666666666666667
+data_name:CLINC150_model:sup-simcse-roberta-base_train_10_2_test_acc:0.6666666666666667
+data_name:CLINC150_model:sup-simcse-roberta-base_train_10_3_test_acc:0.6666666666666667
+data_name:CLINC150_model:sup-simcse-roberta-base_train_10_4_test_acc:0.6666666666666667
+data_name:CLINC150_model:sup-simcse-roberta-base_train_10_5_test_acc:0.6666666666666667
+data_name:CLINC150_model:sup-simcse-roberta-base_train_10_6_test_acc:0.6666666666666667
+data_name:CLINC150_model:sup-simcse-roberta-base_train_10_7_test_acc:0.6666666666666667
+data_name:CLINC150_model:sup-simcse-roberta-base_train_10_8_test_acc:0.6666666666666667
+data_name:CLINC150_model:sup-simcse-roberta-base_train_10_9_test_acc:0.6666666666666667
+data_name:CLINC150_model:sup-simcse-roberta-base_train_10_10_test_acc:0.6666666666666667
+data_name:CLINC150_model:sup-simcse-roberta-base_train_10_11_test_acc:74.55555555555556
+data_name:CLINC150_model:sup-simcse-roberta-base_train_10_12_test_acc:86.31111111111112

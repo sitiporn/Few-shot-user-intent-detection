@@ -1,0 +1,5 @@
+test acc
+data_name:CLINC150_model:sup-simcse-roberta-base_test_acc:86.64444444444445
+data_name:CLINC150_model:unsup-simcse-roberta-base_test_acc:81.15555555555557
+data_name:CLINC150_model:sup-simcse-bert-base-uncased_test_acc:88.75555555555556
+data_name:CLINC150_model:unsup-simcse-bert-base-uncased_test_acc:83.0

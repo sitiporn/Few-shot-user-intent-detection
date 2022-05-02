@@ -1,0 +1,5 @@
+test acc
+data_name:BANKING77_model:sup-simcse-roberta-base_test_acc:73.21428571428571
+data_name:BANKING77_model:unsup-simcse-roberta-base_test_acc:73.6038961038961
+data_name:BANKING77_model:sup-simcse-bert-base-uncased_test_acc:70.81168831168831
+data_name:BANKING77_model:unsup-simcse-bert-base-uncased_test_acc:68.37662337662339

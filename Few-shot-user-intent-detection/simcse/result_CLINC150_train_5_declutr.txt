@@ -1,0 +1,2 @@
+test acc
+shot:train_5_data_name:CLINC150_model:declutr-small_test_acc:77.46666666666667

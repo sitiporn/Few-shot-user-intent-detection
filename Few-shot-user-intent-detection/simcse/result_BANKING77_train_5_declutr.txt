@@ -1,0 +1,2 @@
+test acc
+shot:train_5_data_name:BANKING77_model:declutr-small_test_acc:69.44805194805195
