@@ -1,5 +1,14 @@
 # Study Few shot user intent detection  in state of art 
 
+
+## Simple Contrastive Learning of Sentence Embeddings with 150 intents
+
+![image](https://user-images.githubusercontent.com/31414731/166154720-d0156ac3-2653-4ed7-b35a-4ce82bd22ef7.png)
+## Roberta-base with 150 intents
+![image](https://user-images.githubusercontent.com/31414731/166154787-527e72a6-5802-4903-8d58-1b3a4a2e2475.png)
+
+
+
 1. SimCSE: Simple Contrastive Learning of Sentence Embeddings
    ref: https://github.com/princeton-nlp/SimCSE  
 2. DNNC-few-shot-intent  
@@ -27,7 +36,6 @@
    4. https://monkeylearn.com/blog/intent-classification/
    5. https://medium.com/analytics-vidhya/dialog-augmentation-and-intent-detection-5d76bdf0fcb8
 
-## Simple Contrastive Learning of Sentence Embeddings
-![image](https://user-images.githubusercontent.com/31414731/166154720-d0156ac3-2653-4ed7-b35a-4ce82bd22ef7.png)
-## Roberta-base 
-![image](https://user-images.githubusercontent.com/31414731/166154787-527e72a6-5802-4903-8d58-1b3a4a2e2475.png)
+Source of Datasets for lanugage tasks:
+
+https://www.topbots.com/generalized-language-models-tasks-datasets/
