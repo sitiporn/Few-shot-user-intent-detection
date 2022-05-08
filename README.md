@@ -1,4 +1,13 @@
-# Study Few shot user intent detection  in state of art 
+# Few shot user intent detection  in state of art 
+
+### Goal of experiments
+
+1. Emulate the success of DNNC performance of OOS detection
+2. which model perform well in-scope benchmark datasets
+3. Is the distribution uniformly of embeddings agree with the accuracy of model in-scope on test set
+4. How much knowledege should I keep from previous task(pretrain stage) to fine on downstream tasks  
+
+![image](https://user-images.githubusercontent.com/31414731/167282886-6d39ac51-60b0-442d-8380-2ba0c17d05b4.png)
 
 
 ## Simple Contrastive Learning of Sentence Embeddings with 150 intents
@@ -7,6 +16,8 @@
 ## Roberta-base with 150 intents
 ![image](https://user-images.githubusercontent.com/31414731/166154787-527e72a6-5802-4903-8d58-1b3a4a2e2475.png)
 
+
+![image](https://user-images.githubusercontent.com/31414731/167282905-d2b44597-ab9e-4d82-8186-5fd385b9cf96.png)
 
 
 1. SimCSE: Simple Contrastive Learning of Sentence Embeddings
