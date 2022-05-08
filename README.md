@@ -1,4 +1,4 @@
-# Few shot user intent detection  in state of art 
+## Few shot user intent detection  in state of art 
 
 ### Goal of experiments
 
@@ -6,6 +6,11 @@
 2. which model perform well in-scope benchmark datasets
 3. Is the distribution uniformly of embeddings agree with the accuracy of model in-scope on test set
 4. How much knowledege should I keep from previous task(pretrain stage) to fine on downstream tasks  
+
+### Insight
+
+1. The quality of embeddings and performance of model has positive relationships
+2. In few shot with low number of data if we unfreeze many layers, the performance model will screw up because of loss knowledge from pretext task
 
 ![image](https://user-images.githubusercontent.com/31414731/167299987-8f2db9d2-8d3d-4aee-9b3f-f178905cd40d.png)
 
