@@ -7,7 +7,7 @@
 3. Is the distribution uniformly of embeddings agree with the accuracy of model in-scope on test set
 4. How much knowledege should I keep from previous task(pretrain stage) to fine on downstream tasks  
 
-![image](https://user-images.githubusercontent.com/31414731/167282886-6d39ac51-60b0-442d-8380-2ba0c17d05b4.png)
+![image](https://user-images.githubusercontent.com/31414731/167299987-8f2db9d2-8d3d-4aee-9b3f-f178905cd40d.png)
 
 
 ## Simple Contrastive Learning of Sentence Embeddings with 150 intents
@@ -50,3 +50,4 @@
 Source of Datasets for lanugage tasks:
 
 https://www.topbots.com/generalized-language-models-tasks-datasets/
+https://pytorch.org/text/stable/datasets.html#penntreebank
