@@ -12,18 +12,26 @@
 1. The quality of embeddings and performance of model has positive relationships
 2. In few shot with low number of data if we unfreeze many layers, the performance model will screw up because of loss knowledge from pretext task
 
+### Encoder summary
+
+1. BERT uses static masking
+2. Roberta uses dynamic masking
+
+## Result
+
 ![image](https://user-images.githubusercontent.com/31414731/167299987-8f2db9d2-8d3d-4aee-9b3f-f178905cd40d.png)
 
 
-## Simple Contrastive Learning of Sentence Embeddings with 150 intents
+### Simple Contrastive Learning of Sentence Embeddings with 150 intents
 
 ![image](https://user-images.githubusercontent.com/31414731/166154720-d0156ac3-2653-4ed7-b35a-4ce82bd22ef7.png)
-## Roberta-base with 150 intents
+### Roberta-base with 150 intents
 ![image](https://user-images.githubusercontent.com/31414731/166154787-527e72a6-5802-4903-8d58-1b3a4a2e2475.png)
 
 
 ![image](https://user-images.githubusercontent.com/31414731/167282905-d2b44597-ab9e-4d82-8186-5fd385b9cf96.png)
 
+## References
 
 1. SimCSE: Simple Contrastive Learning of Sentence Embeddings
    ref: https://github.com/princeton-nlp/SimCSE  
